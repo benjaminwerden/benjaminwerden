@@ -196,7 +196,8 @@ p {
   align-items: center;
   gap: 32px;
   padding: 24px 0;
-  border-color: var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .resume-intro__photo {
@@ -438,10 +439,11 @@ p {
   gap: 4px 24px;
   align-items: start;
   padding: 18px 0;
-  border-color: var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .doc-index__row:first-of-type {
+  border-top: 1px solid;
   border-top: 1px solid var(--border);
 }
 
