@@ -5,12 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benjamin Werden</title>
+  <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>rect{fill:%2354B689}@media(prefers-color-scheme:dark){rect{fill:%2368d39e}}</style><rect width='100' height='100' rx='22'/><text x='50%' y='68%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto, sans-serif' font-weight='900' font-size='46' fill='white'>BW</text></svg>">
   <link rel="stylesheet" href="styles/ImStylish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
 </head>
 
 <body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+  🌙
+</button>
   <main class="resume">
 
     <header class="resume-header">
@@ -122,6 +126,47 @@
         higher-value work while building systems an organization can actually trust.</p>
     </footer>
   </main>
+
+  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const favicon = document.getElementById('favicon');
+
+  function updateFavicon(accentColor, textColor) {
+    if (!favicon) return;
+    const cleanAccent = encodeURIComponent(accentColor);
+    const cleanText = encodeURIComponent(textColor);
+    
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='${cleanAccent}'/><text x='50%' y='68%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto, sans-serif' font-weight='900' font-size='46' fill='${cleanText}'>BW</text></svg>`;
+    
+    favicon.setAttribute('href', `data:image/svg+xml,${svg}`);
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    
+    const isDark = theme === 'dark';
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    
+    // Box uses accent color; Text dynamically takes the site background color
+    const accentColor = isDark ? '#68d39e' : '#54B689';
+    const backgroundColor = isDark ? '#1e1e1e' : '#ffffff';
+    
+    updateFavicon(accentColor, backgroundColor);
+  }
+
+  // Detect saved preference or fall back to system OS default
+  const savedTheme = localStorage.getItem('theme');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (systemDark ? 'dark' : 'light');
+
+  applyTheme(initialTheme);
+
+  toggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+</script>
 </body>
 
 </html>
