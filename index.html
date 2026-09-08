@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benjamin Werden</title>
-  <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>rect{fill:%2354B689}@media(prefers-color-scheme:dark){rect{fill:%2368d39e}}</style><rect width='100' height='100' rx='22'/><text x='50%' y='68%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto, sans-serif' font-weight='900' font-size='46' fill='white'>BW</text></svg>">
+  <meta name="description" content="Benjamin Werden: automation architect and software engineer.">
+  <link id="favicon" rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>rect{fill:%232565AE}@media(prefers-color-scheme:dark){rect{fill:%237EC8F2}}</style><rect width='100' height='100' rx='22'/><text x='50%' y='68%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto, sans-serif' font-weight='900' font-size='46' fill='white'>BW</text></svg>">
   <link rel="stylesheet" href="styles/ImStylish.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Benjamin Werden",
+  "jobTitle": "Automation Engineer",
+  "url": "https://www.benjaminwerden.com",
+  "sameAs": ["https://linkedin.com/in/benjaminwerden"],
+  "description": "Senior automation engineer and architect with 10+ years of experience building and leading enterprise automation programs."
+}
+</script>
 </head>
 
 <body>
   <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
-  🌙
-</button>
+    <span id="theme-icon" aria-hidden="true">🌙</span>
+  </button>
   <main class="resume">
 
     <header class="resume-header">
       <div class="resume-header__title">
         <h1 class="resume-header__name">Benjamin Werden</h1>
-        <h2 class="resume-header__domain">[dot com]</h2>
+        <span class="resume-header__domain">[dot com]</span>
         <div class="resume-header__tagline">Automation Engineer | Software Architect | Product Owner</div>
       </div>
       <ul class="resume-header__contact">
@@ -28,7 +40,7 @@
           <a class="resume-header__contact-link" href="https://linkedin.com/in/benjaminwerden" target="_blank"
             rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
-              viewBox="0 0 16 16">
+              viewBox="0 0 16 16" aria-hidden="true">
               <path
                 d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
             </svg>
@@ -36,7 +48,7 @@
           </a>
         </li>
         <li class="resume-header__contact-item">
-          <svg class="icon" viewBox="0 0 24 24">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 2C8 2 5 5 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-4-3-7-7-7z" fill="none" stroke-width="2" />
             <circle cx="12" cy="9" r="2.5" fill="none" stroke-width="2" />
           </svg>
@@ -86,16 +98,47 @@
         <section class="resume-section">
           <h2 class="resume-section__heading">Tech Stack &amp; Core Competencies</h2>
           <h3 class="entry__title">Leadership &amp; Strategy</h3>
-          <p>Agile Product Ownership (Scrum/Kanban), Stakeholder Management &amp; Roadmapping, Process Discovery &amp;
-            ROI-Backed Strategy, Enterprise Change Management, Technical Interviewing</p>
+          <ul class="tag-list">
+            <li class="tag-list__item">Agile Product Ownership</li>
+            <li class="tag-list__item">Stakeholder Management</li>
+            <li class="tag-list__item">Roadmapping</li>
+            <li class="tag-list__item">Process Discovery</li>
+            <li class="tag-list__item">ROI-Backed Strategy</li>
+            <li class="tag-list__item">Enterprise Change Management</li>
+            <li class="tag-list__item">Technical Interviewing</li>
+          </ul>
+
           <h3 class="entry__title">Architecture &amp; Engineering</h3>
-          <p>Automation Architecture &amp; Development, Azure-Native Orchestration &amp; Integration, Data Governance
-            &amp;
-            CMDB Administration, Software Architecture Standards, CI/CD</p>
+          <ul class="tag-list">
+            <li class="tag-list__item">Automation Architecture</li>
+            <li class="tag-list__item">Automation Development</li>
+            <li class="tag-list__item">Azure-Native Orchestration</li>
+            <li class="tag-list__item">System Integration</li>
+            <li class="tag-list__item">Data Governance</li>
+            <li class="tag-list__item">CMDB Administration</li>
+            <li class="tag-list__item">Software Architecture Standards</li>
+            <li class="tag-list__item">CI/CD</li>
+          </ul>
+
           <h3 class="entry__title">Technologies &amp; Languages</h3>
-          <p>C#, Python, Java, JavaScript, C, C++, Visual Basic, PHP, Azure (Functions, Portal, DevOps), ServiceNow,
-            SAP,
-            UiPath, MVC, .NET Core, Selenium WebDriver, Git, GitHub, SQL Server</p>
+          <ul class="tag-list">
+            <li class="tag-list__item">C#</li>
+            <li class="tag-list__item">Python</li>
+            <li class="tag-list__item">Java</li>
+            <li class="tag-list__item">JavaScript</li>
+            <li class="tag-list__item">C</li>
+            <li class="tag-list__item">C++</li>
+            <li class="tag-list__item">Visual Basic</li>
+            <li class="tag-list__item">PHP</li>
+            <li class="tag-list__item">Azure (Functions, Portal, DevOps)</li>
+            <li class="tag-list__item">ServiceNow</li>
+            <li class="tag-list__item">SAP</li>
+            <li class="tag-list__item">UiPath</li>
+            <li class="tag-list__item">.NET Core / MVC</li>
+            <li class="tag-list__item">Selenium WebDriver</li>
+            <li class="tag-list__item">Git &amp; GitHub</li>
+            <li class="tag-list__item">SQL Server</li>
+          </ul>
         </section>
 
         <!-- downloads go here -->
@@ -105,14 +148,16 @@
           <div class="doc-index__row">
             <h3 class="doc-index__title">Networking Brief</h3>
             <p class="doc-index__desc">A one-page overview built for a quick read after we meet.</p>
-            <a class="doc-index__download" href="documents/Benjamin_Werden_Networking_Brief.pdf" download>Download
+            <a class="doc-index__download" href="documents/Benjamin_Werden_Networking_Brief.pdf" download
+              aria-label="Download Networking Brief (PDF)">Download
               .pdf</a>
           </div>
 
           <div class="doc-index__row">
             <h3 class="doc-index__title">Resume</h3>
             <p class="doc-index__desc">A more detailed look at my automation and software engineering experience.</p>
-            <a class="doc-index__download" href="documents/Benjamin_Werden_Resume_Automation.pdf" download>Download
+            <a class="doc-index__download" href="documents/Benjamin_Werden_Resume_Automation.pdf" download
+              aria-label="Download Full Resume (PDF)">Download
               .pdf</a>
           </div>
 
@@ -128,45 +173,46 @@
   </main>
 
   <script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  const favicon = document.getElementById('favicon');
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const favicon = document.getElementById('favicon');
 
-  function updateFavicon(accentColor, textColor) {
-    if (!favicon) return;
-    const cleanAccent = encodeURIComponent(accentColor);
-    const cleanText = encodeURIComponent(textColor);
-    
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='${cleanAccent}'/><text x='50%' y='68%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto, sans-serif' font-weight='900' font-size='46' fill='${cleanText}'>BW</text></svg>`;
-    
-    favicon.setAttribute('href', `data:image/svg+xml,${svg}`);
-  }
+    function updateFavicon(accentColor, textColor) {
+      if (!favicon) return;
+      const cleanAccent = encodeURIComponent(accentColor);
+      const cleanText = encodeURIComponent(textColor);
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    
-    const isDark = theme === 'dark';
-    toggleBtn.textContent = isDark ? '☀️' : '🌙';
-    
-    // Box uses accent color; Text dynamically takes the site background color
-    const accentColor = isDark ? '#68d39e' : '#54B689';
-    const backgroundColor = isDark ? '#1e1e1e' : '#ffffff';
-    
-    updateFavicon(accentColor, backgroundColor);
-  }
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='${cleanAccent}'/><text x='50%' y='68%' dominant-baseline='middle' text-anchor='middle' font-family='Roboto, sans-serif' font-weight='900' font-size='46' fill='${cleanText}'>BW</text></svg>`;
 
-  // Detect saved preference or fall back to system OS default
-  const savedTheme = localStorage.getItem('theme');
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (systemDark ? 'dark' : 'light');
+      favicon.setAttribute('href', `data:image/svg+xml,${svg}`);
+    }
 
-  applyTheme(initialTheme);
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
 
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
-  });
-</script>
+      const isDark = theme === 'dark';
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+
+      // Box uses accent color; Text dynamically takes the site background color
+      const accentColor = isDark ? '#7EC8F2' : '#2565AE';
+      const backgroundColor = isDark ? '#1e1e1e' : '#ffffff';
+
+      updateFavicon(accentColor, backgroundColor);
+    }
+
+    // Detect saved preference or fall back to system OS default
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (systemDark ? 'dark' : 'light');
+
+    applyTheme(initialTheme);
+
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+  </script>
 </body>
 
 </html>

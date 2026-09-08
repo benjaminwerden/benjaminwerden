@@ -31,10 +31,14 @@
   --text-main: #4f4f4f;
   --text-heading: #292929;
   --text-muted: #767676;
-  --accent: #54B689;
-  --accent-hover: #3d936d;
+  --accent: #3B82C4;
+  --accent-hover: #2f6ba3;
+  --accent-text: #2565AE;
+  --accent-text-hover: #184A6E;
   --border: rgba(0, 0, 0, 0.1);
   --shadow: rgba(0, 0, 0, 0.1);
+  --accent-border: rgba(59, 130, 196, 0.4);
+  --accent-tint: rgba(59, 130, 196, 0.1);
 }
 
 /* Auto Dark Mode (matches OS/Browser settings) */
@@ -45,10 +49,14 @@
     --text-main: #c4c4c4;
     --text-heading: #f0f0f0;
     --text-muted: #999999;
-    --accent: #68d39e;
-    --accent-hover: #82e0b1;
+    --accent: #5FA8DE;
+    --accent-hover: #7EC8F2;
+    --accent-text: #7EC8F2;
+    --accent-text-hover: #A0DBFA;
     --border: rgba(255, 255, 255, 0.12);
     --shadow: rgba(0, 0, 0, 0.5);
+    --accent-border: rgba(95, 168, 222, 0.4);
+    --accent-tint: rgba(95, 168, 222, 0.1);
   }
 }
 
@@ -59,13 +67,19 @@
   --text-main: #c4c4c4;
   --text-heading: #f0f0f0;
   --text-muted: #999999;
-  --accent: #68d39e;
-  --accent-hover: #82e0b1;
+  --accent: #5FA8DE;
+  --accent-hover: #7EC8F2;
+  --accent-text: #7EC8F2;
+  --accent-text-hover: #A0DBFA;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: rgba(0, 0, 0, 0.5);
+  --accent-border: rgba(95, 168, 222, 0.4);
+  --accent-tint: rgba(95, 168, 222, 0.1);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -80,7 +94,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   color: var(--text-heading);
   font-weight: bold;
@@ -125,8 +142,7 @@ p {
   max-width: 1100px;
   margin: 0 auto;
   background: var(--bg-card);
-  border: 1px solid;
-  border-color: var(--border);
+  border: 1px solid var(--border);
   box-shadow: 0 1rem 3rem var(--shadow);
   padding: 48px;
 }
@@ -140,7 +156,6 @@ p {
   justify-content: space-between;
   gap: 24px;
   padding-bottom: 24px;
-  border-color: var(--border);
 }
 
 .resume-header__name {
@@ -149,7 +164,7 @@ p {
   font-weight: 900;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -172,14 +187,14 @@ p {
 
 .resume-header__contact {
   padding-left: 24px;
-  border-left: 1px solid;
-  border-color: var(--border);
+  border-left: 1px solid var(--border);
   font-size: 0.85rem;
 }
 
 .resume-header__contact-item {
   margin-bottom: 8px;
 }
+
 .resume-header__contact-item:last-child {
   margin-bottom: 0;
 }
@@ -229,22 +244,9 @@ p {
   padding: 24px 40px 24px 0;
 }
 
-.resume-body__aside {
-  flex: 1;
-  min-width: 240px;
-  padding: 24px 0 24px 32px;
-  border-left: 1px solid;
-  border-color: var(--border);
-}
-
 @media (max-width: 800px) {
   .resume-body__main {
     padding: 24px 0;
-  }
-  .resume-body__aside {
-    padding: 24px 0;
-    border-left: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -254,6 +256,7 @@ p {
 .resume-section {
   padding-bottom: 24px;
 }
+
 .resume-section:last-child {
   padding-bottom: 0;
 }
@@ -265,7 +268,7 @@ p {
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .resume-section__heading::before {
@@ -283,6 +286,7 @@ p {
 .entry {
   margin-bottom: 20px;
 }
+
 .entry:last-child {
   margin-bottom: 0;
 }
@@ -316,6 +320,7 @@ p {
   list-style: disc;
   font-size: 0.9rem;
 }
+
 .entry__list li {
   margin-bottom: 4px;
 }
@@ -324,61 +329,10 @@ p {
   text-decoration: underline;
   text-decoration-color: rgba(41, 41, 41, 0.3);
 }
+
 .theme-link:hover {
   color: var(--accent);
-  text-decoration-color: rgba(84, 182, 137, 0.8);
-}
-
-/* ---------- BLOCK: skill-group (used inside the Skills section) ---------- */
-
-.skill-group {
-  margin-bottom: 16px;
-}
-.skill-group:last-child {
-  margin-bottom: 0;
-}
-
-.skill-group__title {
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-}
-
-.skill-group__list {
-  font-size: 0.9rem;
-}
-.skill-group__list li {
-  margin-bottom: 6px;
-}
-.skill-group__list li:last-child {
-  margin-bottom: 0;
-}
-
-.skill-group__note {
-  color: var(--text-muted);
-}
-
-/* ---------- BLOCK: credential (education / awards entries) ---------- */
-
-.credential-list {
-  font-size: 0.9rem;
-}
-
-.credential {
-  margin-bottom: 14px;
-}
-.credential:last-child {
-  margin-bottom: 0;
-}
-
-.credential__title {
-  font-weight: bold;
-  color: var(--text-heading);
-}
-
-.credential__org,
-.credential__time {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  text-decoration-color: var(--accent-text-hover);
 }
 
 /* ---------- BLOCK: resume-footer ---------- */
@@ -386,8 +340,7 @@ p {
 .resume-footer {
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid;
-  border-color: var(--border);
+  border-top: 1px solid var(--border);
   text-align: center;
 }
 
@@ -404,6 +357,7 @@ p {
   display: flex;
   align-items: center;
 }
+
 .resume-footer__social-link:hover {
   color: var(--accent);
 }
@@ -420,17 +374,18 @@ p {
   .resume {
     padding: 24px 20px;
   }
+
   .resume-header {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .resume-header__contact {
     padding-left: 0;
     border-left: 0;
   }
 }
 
-/* downloads */
 /* ---------- BLOCK: doc-index ---------- */
 
 .doc-index__row {
@@ -443,7 +398,6 @@ p {
 }
 
 .doc-index__row:first-of-type {
-  border-top: 1px solid;
   border-top: 1px solid var(--border);
 }
 
@@ -467,30 +421,52 @@ p {
   align-self: center;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
   white-space: nowrap;
-  border: 1px solid rgba(84, 182, 137, 0.4);
+  border: 1px solid var(--accent-border);
   border-radius: 4px;
   padding: 6px 14px;
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .doc-index__download:hover {
-  background: rgba(84, 182, 137, 0.1);
+  background: var(--accent-tint);
   border-color: var(--accent);
-  color: var(--accent-hover);
+  color: var(--accent-text-hover);
 }
 
 @media (max-width: 560px) {
   .doc-index__row {
     grid-template-columns: 1fr;
   }
-  
+
   .doc-index__download {
     grid-column: 1;
     grid-row: auto;
     justify-self: start;
     margin-top: 10px;
   }
+}
+
+/* ---------- BLOCK: tag-list (compact skill/tech tags) ---------- */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.tag-list:last-child {
+  margin-bottom: 0;
+}
+
+.tag-list__item {
+  font-size: 0.85rem;
+  color: var(--text-heading);
+  background: var(--bg-body);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 14px;
 }
